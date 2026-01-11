@@ -1,17 +1,11 @@
 {
-  "extends": "@synth-video/tsconfig/electron.json",
+  "extends": "@synth-video/tsconfig/react.json",
   "compilerOptions": {
-    "outDir": "./dist-electron",
-    "rootDir": "./electron",
-    "verbatimModuleSyntax": false,
-    "module": "CommonJS",
-    "moduleResolution": "node"
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
-  "include": [
-    "electron/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist-electron"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }

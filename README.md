@@ -8,8 +8,7 @@ A modern monorepo for video synthesis platform built with pnpm workspaces.
 synth-video-monorepo/
 ├─ apps/
 │  ├─ web/                # React Web Application
-│  ├─ desktop-ui/         # React Renderer (Electron)
-│  └─ desktop/            # Electron main + preload
+│  └─ desktop/            # Desktop Application (React)
 │
 ├─ packages/
 │  ├─ ui/                 # Design System React
@@ -55,8 +54,7 @@ pnpm test
 ### Apps
 
 - **@synth-video/web**: React web application
-- **@synth-video/desktop-ui**: Electron renderer process (React)
-- **@synth-video/desktop**: Electron main process
+- **@synth-video/desktop**: Desktop application (React)
 
 ### Packages
 
@@ -79,7 +77,7 @@ This monorepo follows Clean Architecture principles:
 ```
 ┌──────────────────────────────────────────────┐
 │                    Apps                       │
-│  (web, desktop-ui, desktop)                  │
+│  (web, desktop)                              │
 ├──────────────────────────────────────────────┤
 │                 Application                   │
 │  (hooks, orchestration, state management)    │
@@ -95,4 +93,5 @@ This monorepo follows Clean Architecture principles:
 ## 📝 License
 
 MIT
+
 # synth-video-monorepo

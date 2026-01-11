@@ -8,6 +8,7 @@ export default defineConfig({
   server: {
     port: 5174,
     strictPort: true,
+    open: false, // Desktop app - não abre automaticamente no browser
   },
   resolve: {
     alias: {
