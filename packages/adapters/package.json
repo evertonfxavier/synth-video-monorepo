@@ -1,0 +1,67 @@
+{
+  "name": "@synth-video/adapters",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Platform-specific implementations",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./browser": {
+      "import": {
+        "types": "./dist/browser.d.ts",
+        "default": "./dist/browser.js"
+      },
+      "require": {
+        "types": "./dist/browser.d.cts",
+        "default": "./dist/browser.cjs"
+      }
+    },
+    "./electron": {
+      "import": {
+        "types": "./dist/electron.d.ts",
+        "default": "./dist/electron.js"
+      },
+      "require": {
+        "types": "./dist/electron.d.cts",
+        "default": "./dist/electron.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@synth-video/core": "workspace:*",
+    "@synth-video/ports": "workspace:*"
+  },
+  "devDependencies": {
+    "@synth-video/eslint-config": "workspace:*",
+    "@synth-video/tsconfig": "workspace:*",
+    "@types/node": "^22.10.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

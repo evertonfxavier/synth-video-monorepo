@@ -1,0 +1,24 @@
+{
+  "name": "@synth-video/vite-config",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shared Vite configurations",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./react": "./react.js",
+    "./electron": "./electron.js",
+    "./lib": "./lib.js"
+  },
+  "files": [
+    "index.js",
+    "react.js",
+    "electron.js",
+    "lib.js"
+  ],
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.5"
+  }
+}
