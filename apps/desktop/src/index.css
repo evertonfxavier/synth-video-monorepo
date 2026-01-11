@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "@synth-video/ui/src/styles.css";
+
+@source "./";
+@source "@synth-video/ui/src";
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
